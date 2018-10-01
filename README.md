@@ -109,7 +109,7 @@ private
   end
 ```
 
-Once you've implemented `#authenticate_user`, set the authentication as a `before_action` in your `ApplicationController`. In your `SessionsController`, skip the `before_action` with `skip_before_action :authenticate_user, only: :create`. Now, whenever users do not have an access token stored in their session, they will be redirected to the Foursquare authorization URL.
+Once you've implemented `#authenticate_user`, set the authentication as a `before_action` in your `ApplicationController`. In your `SessionsController`, skip the `before_action` with `skip_before_action :authenticate_user, only: :create`. Now, whenever users do not have an access token stored in their session, they will be redirected to the Foursquare authorization URL.    
 
 Let's try it out. Start your Rails server and try to hit the `/search` page. You should get redirected to Foursquare! Hit the "Allow" button and let's see what happens.
 
